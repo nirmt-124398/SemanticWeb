@@ -1,0 +1,419 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Eternal Nightmare</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #ff0000;
+            font-family: 'Creepster', cursive;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            perspective: 1000px;
+        }
+
+        .container {
+            text-align: center;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        h1 {
+            font-size: 72px;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            animation: flicker 0.5s infinite alternate, shake 0.5s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes shake {
+            0% { transform: translate(2px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(0px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(2px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(2px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px #ff0000;
+            animation: textMove 3s infinite;
+        }
+
+        @keyframes textMove {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ff0000;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #ff5555;
+            transform: scale(1.1) skew(-5deg);
+        }
+
+        a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 C25,25 75,25 100,0 C75,75 25,75 0,100 C25,75 75,75 100,100 C75,25 25,25 0,0" fill="none" stroke="rgba(255,0,0,0.1)" stroke-width="2"/></svg>') 0 0 / 100px 100px;
+            animation: backgroundMove 30s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes backgroundMove {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-100px, -100px) rotate(360deg); }
+        }
+
+        .jump-scare {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-family: 'Nosifer', cursive;
+            font-size: 200px;
+            color: #ff0000;
+            opacity: 0;
+            animation: jumpScare 10s infinite;
+        }
+
+        @keyframes jumpScare {
+            0%, 95% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            96% { transform: translate(-50%, -50%) scale(5); opacity: 1; }
+            98% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+        }
+
+        .scream {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            background: url('./pngimg.com\ -\ ghost_PNG63.png') no-repeat center center;
+            background-size: contain;
+            cursor: pointer;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body onload="playScream()">
+    <div class="background"></div>
+    <div class="container">
+        <h1>404 - Eternal Nightmare</h1>
+        <p>You've strayed into the realm of unending terror...</p>
+        <p>Choose your fate:</p>
+        <ul>
+            <li><a href="/">Attempt Escape</a></li>
+            <li><a href="/sitemap.html">Confront Your Fears</a></li>
+            <li><a href="/contact.html">Cry for Help</a></li>
+        </ul>
+    </div>
+    <div class="jump-scare">BOO!</div>
+    <div class="scream"></div>
+    <script>
+        function playScream() {
+            const audio = new Audio('./scary-music-box-for-spooky-scenes-165983.mp3');
+            audio.play();
+            document.body.style.backgroundColor = 'red';
+            setTimeout(() => {
+                document.body.style.backgroundColor = 'black';
+            }, 500);
+        }
+
+        document.querySelector('.scream').addEventListener('click', function() {
+            const audio = new Audio('./scary-music-box-for-spooky-scenes-165983.mp3');
+            audio.play();
+            document.body.style.backgroundColor = 'red';
+            setTimeout(() => {
+                document.body.style.backgroundColor = 'black';
+            }, 500);
+        });
+
+        document.querySelector('.container').addEventListener('mouseover', function() {
+            this.style.color = '#ff5555';
+            setTimeout(() => {
+                this.style.color = '#ff0000';
+            }, 500);
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Eternal Nightmare</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #ff0000;
+            font-family: 'Creepster', cursive;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            perspective: 1000px;
+        }
+
+        .container {
+            text-align: center;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        h1 {
+            font-size: 72px;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+            animation: flicker 0.5s infinite alternate, shake 0.5s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes shake {
+            0% { transform: translate(2px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(0px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(2px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(2px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px #ff0000;
+            animation: textMove 3s infinite;
+        }
+
+        @keyframes textMove {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ff0000;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #ff5555;
+            transform: scale(1.1) skew(-5deg);
+        }
+
+        a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 C25,25 75,25 100,0 C75,75 25,75 0,100 C25,75 75,75 100,100 C75,25 25,25 0,0" fill="none" stroke="rgba(255,0,0,0.1)" stroke-width="2"/></svg>') 0 0 / 100px 100px;
+            animation: backgroundMove 30s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes backgroundMove {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-100px, -100px) rotate(360deg); }
+        }
+
+        .jump-scare {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-family: 'Nosifer', cursive;
+            font-size: 200px;
+            color: #ff0000;
+            opacity: 0;
+            animation: jumpScare 10s infinite;
+        }
+
+        @keyframes jumpScare {
+            0%, 95% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            96% { transform: translate(-50%, -50%) scale(5); opacity: 1; }
+            98% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+        }
+
+        .scream {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            background: url('./pngimg.com\ -\ ghost_PNG63.png') no-repeat center center;
+            background-size: contain;
+            cursor: pointer;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body onload="playScream()">
+    <div class="background"></div>
+    <div class="container">
+        <h1>404 - Eternal Nightmare</h1>
+        <p>You've strayed into the realm of unending terror...</p>
+        <p>Choose your fate:</p>
+        <ul>
+            <li><a href="/">Attempt Escape</a></li>
+            <li><a href="/sitemap.html">Confront Your Fears</a></li>
+            <li><a href="/contact.html">Cry for Help</a></li>
+        </ul>
+    </div>
+    <div class="jump-scare">BOO!</div>
+    <div class="scream"></div>
+    <script>
+        function playScream() {
+            const audio = new Audio('./scary-music-box-for-spooky-scenes-165983.mp3');
+            audio.play();
+            document.body.style.backgroundColor = 'red';
+            setTimeout(() => {
+                document.body.style.backgroundColor = 'black';
+            }, 500);
+        }
+
+        document.querySelector('.scream').addEventListener('click', function() {
+            const audio = new Audio('./scary-music-box-for-spooky-scenes-165983.mp3');
+            audio.play();
+            document.body.style.backgroundColor = 'red';
+            setTimeout(() => {
+                document.body.style.backgroundColor = 'black';
+            }, 500);
+        });
+
+        document.querySelector('.container').addEventListener('mouseover', function() {
+            this.style.color = '#ff5555';
+            setTimeout(() => {
+                this.style.color = '#ff0000';
+            }, 500);
+        });
+    </script>
+</body>
+</html>

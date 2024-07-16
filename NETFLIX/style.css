@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(images/Bacgground.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1000px, 100vw);
+
+    height: 100vh;
+    position: relative;
+}
+
+.main .box {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.74;
+    position: absolute;
+    top: 0px;
+}
+
+nav {
+    height: 120px;
+    max-width: 65vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    /* flex-direction: row; */
+}
+
+nav img {
+    /* color: red; */
+    width: 114px;
+    position: relative;
+    z-index: 1;
+}
+
+nav button {
+    position: relative;
+    z-index: 1
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Josefin Sans';
+    gap: 25px;
+    padding: 0px 30px;
+}
+
+.text>:first-child {
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.text>:nth-child(2) {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text>:nth-child(3) {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.line {
+    height: 6px;
+    background-color: #2c2b2b;
+}
+
+.btn {
+    padding: 6px 14px;
+    background-color: rgba(247, 233, 233, 0.003);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.438);
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.btn-red-nav {
+    background-color: red;
+    border: none;
+}
+
+.btn-red {
+    background-color: red;
+    padding: 14px 47px;
+    font-size: 20px;
+    border: none;
+    font-weight: bolder;
+}
+
+input {
+    padding: 18px 219px 18px 20px;
+    font-size: 13px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    border-radius: 3px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgb(167, 162, 162);
+    font-weight: bold;
+
+}
+
+.flxfrinp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.secfirst {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    align-content: center;
+    padding: 109px 0px;
+
+}
+
+.secfirst>div {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.secimg {
+    position: relative;
+
+}
+
+.secimg img {
+    width: 30vw;
+    position: relative;
+    z-index: 10;
+}
+
+.secimg video {
+    height: 30vh;
+    position: absolute;
+    top: 70px;
+    right: 35px;
+
+
+}
+
+.secfirst>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+    align-self: start;
+
+}
+
+.secfirst>div :nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.secthird .secimg video {
+    /* width: 40vw; */
+    height: 23vh;
+    position: absolute;
+    top: 40px;
+    right: 90px;
+
+
+}
+
+.faq {
+    margin: 70px;
+}
+
+.faqbox span {
+    color: white;
+    font-size: 24px;
+}
+
+.faqbox svg {
+    width: 50px;
+    height: 42px;
+
+}
+
+.faqbox {
+    display: flex;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    justify-content: space-between;
+    width: 71vw;
+    margin: auto;
+    padding: 20px;
+}
+
+.faq h2 {
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Josefin Sans';
+    padding-bottom: 30px;
+}
+
+.quebox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#one{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.footmain{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 74vw;
+    margin-left: 194px;
+
+}
+
+.footmain ul{
+    list-style-type: none;
+}
+footer h3{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-left: 194px;
+    padding-top: 57px;
+    padding-bottom: 14px;
+
+}
+footer  a{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+footer .btn{
+    margin-left: 194px;
+    margin-top: 21px;
+}
+
+footer h4{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-left: 194px;
+    margin-top: 29px;
+    margin-bottom: 75px;
+
+}
