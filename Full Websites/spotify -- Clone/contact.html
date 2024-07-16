@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            background-image: radial-gradient(#11581E, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #1DB954;
+        }
+
+        .container {
+            background: rgba(0, 30, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.18);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,255,0,0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1DB954;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+        }
+
+        p {
+            font-size: 18px;
+            color: #1DB954;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #1DB954;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact</h1>
+        <p>Here is my contact information:</p>
+        <ul>
+            <li><strong>Name:</strong> Nirmit Rampal</li>
+            <li><strong>Email:</strong> rampalnirmit@gmail.com</li>
+            <li><strong>Github:</strong> <a href="https://github.com/nirmt-124398" target="_blank">My Github</a></li>
+            <!-- Add more details as needed -->
+        </ul>
+    </div>
+</body>
+</html>

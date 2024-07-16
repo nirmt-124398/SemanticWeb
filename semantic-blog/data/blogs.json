@@ -1,0 +1,9 @@
+{
+    "@context": {
+      "@vocab": "http://schema.org/"
+    },
+    "@type": "Blog",
+    "name": "Our Blog",
+    "description": "Explore our latest blog posts."
+  }
+  

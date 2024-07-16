@@ -1,0 +1,132 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://xmlns.com/foaf/0.1/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@base 			<http://xmlns.com/foaf/0.1/> .
+
+<http://xmlns.com/foaf/0.1/> a owl:Ontology ;
+                             dc:title "Friend of a Friend (FOAF) vocabulary"@en; 
+                             dc:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language."@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 15 ###
+#  --------------------------- Property 0------------------------- 
+:productName a owl:DatatypeProperty ;
+             rdfs:label "productName"@en; 
+             rdfs:domain :MobilePhone1;
+             rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 1------------------------- 
+:price a owl:DatatypeProperty ;
+       rdfs:label "price"@en; 
+       rdfs:domain :MobilePhone1;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 2------------------------- 
+:releaseDate a owl:DatatypeProperty ;
+             rdfs:label "releaseDate"@en; 
+             rdfs:domain :MobilePhone1;
+             rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 3------------------------- 
+:brand a owl:DatatypeProperty ;
+       rdfs:label "brand"@en; 
+       rdfs:domain :MobilePhone1;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 4------------------------- 
+:color a owl:DatatypeProperty ;
+       rdfs:label "color"@en; 
+       rdfs:domain :MobilePhone1;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 5------------------------- 
+:productName a owl:DatatypeProperty ;
+             rdfs:label "productName"@en; 
+             rdfs:domain :Laptop;
+             rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 6------------------------- 
+:price a owl:DatatypeProperty ;
+       rdfs:label "price"@en; 
+       rdfs:domain :Laptop;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 7------------------------- 
+:releaseDate a owl:DatatypeProperty ;
+             rdfs:label "releaseDate"@en; 
+             rdfs:domain :Laptop;
+             rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 8------------------------- 
+:brand a owl:DatatypeProperty ;
+       rdfs:label "brand"@en; 
+       rdfs:domain :Laptop;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 9------------------------- 
+:color a owl:DatatypeProperty ;
+       rdfs:label "color"@en; 
+       rdfs:domain :Laptop;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 10------------------------- 
+:productName a owl:DatatypeProperty ;
+             rdfs:label "productName"@en; 
+             rdfs:domain :Accessory1;
+             rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 11------------------------- 
+:price a owl:DatatypeProperty ;
+       rdfs:label "price"@en; 
+       rdfs:domain :Accessory1;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 12------------------------- 
+:releaseDate a owl:DatatypeProperty ;
+             rdfs:label "releaseDate"@en; 
+             rdfs:domain :Accessory1;
+             rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 13------------------------- 
+:brand a owl:DatatypeProperty ;
+       rdfs:label "brand"@en; 
+       rdfs:domain :Accessory1;
+       rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 14------------------------- 
+:color a owl:DatatypeProperty ;
+       rdfs:label "color"@en; 
+       rdfs:domain :Accessory1;
+       rdfs:range rdfs:Datatype . 
+###  Class Definitions (Number of Classes) 8 ###
+#  --------------------------- Class  0------------------------- 
+:Product a owl:Class; 
+          rdfs:subClassOf :Electronics_ ;
+          rdfs:label "Product"@en . 
+#  --------------------------- Class  1------------------------- 
+:Electronics_ a owl:Class; 
+              rdfs:subClassOf :MobilePhone ;
+              rdfs:subClassOf :Accessory_ ;
+              rdfs:subClassOf :Laptop ;
+              rdfs:label "Electronics "@en . 
+#  --------------------------- Class  2------------------------- 
+:MobilePhone a owl:Class; 
+             rdfs:subClassOf :MobilePhone1 ;
+             rdfs:label "MobilePhone"@en . 
+#  --------------------------- Class  3------------------------- 
+:Laptop a owl:Class; 
+         rdfs:subClassOf :Laptop1 ;
+        rdfs:label "Laptop"@en . 
+#  --------------------------- Class  4------------------------- 
+:Accessory_ a owl:Class; 
+            rdfs:subClassOf :Accessory1 ;
+            rdfs:label "Accessory "@en . 
+#  --------------------------- Class  5------------------------- 
+:MobilePhone1 a owl:Class; 
+              rdfs:label "MobilePhone1"@en . 
+#  --------------------------- Class  6------------------------- 
+:Laptop1 a owl:Class; 
+         rdfs:label "Laptop1"@en . 
+#  --------------------------- Class  7------------------------- 
+:Accessory1 a owl:Class, owl:DeprecatedProperty; 
+            rdfs:label "Accessory1"@en . 
+
+
+

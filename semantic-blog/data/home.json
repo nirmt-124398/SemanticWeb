@@ -1,0 +1,10 @@
+
+{
+    "@context": {
+      "@vocab": "http://schema.org/"
+    },
+    "@type": "WebPage",
+    "name": "Home",
+    "description": "Welcome to our blog home page."
+  }
+  

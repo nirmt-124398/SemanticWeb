@@ -1,0 +1,58 @@
+.invert {
+    filter: invert(1);
+}
+
+.bg-grey {
+    background-color: #121212;
+    color: white;
+}
+
+.m-1 {
+    margin: 10px;
+}
+
+.round {
+    border-radius: 7px;
+}
+
+.p-1 {
+    padding: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    /* Background of the track */
+    border-radius: 10px;
+    /* Rounded corners of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2020;
+    /* Thumb color */
+    border-radius: 10px;
+    /* Rounded corners of the thumb */
+    border: 3px solid #2a2a2a;
+    /* Space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0a3421;
+    /* Lighter green on hover */
+}
+
+#play {
+    cursor: pointer;
+}
+
+#previous {
+    cursor: pointer;
+}
+
+#next {
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+{
+    // string
+    "name" : "Nirmit",
+    // integer
+    "mark": 67.45,
+    // boolean
+    "pass": true,
+    // null
+    "license":null,
+    // arrays
+    "arrays":["n","e","p"],
+    // json under json?
+    "obj":{
+            "name":"ridhi",
+            "score":43,
+            "array2":["food","cloths",{"a":false}]
+    }
+    
+}
+
+
+
+OUTPUT from chrome console under inspect
+
+myjson=`{
+    
+    "name" : "Nirmit",
+    
+    "mark": 67.45,
+    "pass": true,
+    "license":null,
+    "arrays":["n","e","p"],
+    "obj":{
+            "name":"ridhi",
+            "score":43,
+            "array2":["food","cloths",{"a":false}]
+    }
+    
+}`
+'{\n    \n    "name" : "Nirmit",\n    \n    "mark": 67.45,\n    "pass": true,\n    "license":null,\n    "arrays":["n","e","p"],\n    "obj":{\n            "name":"ridhi",\n            "score":43,\n            "array2":["food","cloths",{"a":false}]\n    }\n    \n}'
+JSON.parse(myjson)
+{name: 'Nirmit', mark: 67.45, pass: true, license: null, arrays: Array(3), …}
+parsed=JSON.parse(myjson)
+
+{name: 'Nirmit', mark: 67.45, pass: true, license: null, arrays: Array(3), …}arrays: (3) ['n', 'e', 'p']license: nullmark: 67.45name: "Nirmit"obj: array2: Array(3)0: "food"1: "cloths"2: {a: false}length: 3[[Prototype]]: Array(0)name: "ridhi"score: 43[[Prototype]]: Objectpass: true[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+parsed["pass"]
+true
+parsed["obj"]["array2"]["2"]["a"]
+false

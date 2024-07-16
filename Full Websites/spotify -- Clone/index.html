@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/utility.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftside ">
+            <div class="cross"><img src="/images/cross.svg" alt="close hamburger icon"></div>
+            <div class="home bg-grey round p-1">
+                <figure class="logo">
+                    <img class="invert" src="/images/logo.svg" alt="Logo">
+                </figure>
+                <ul>
+                    <li><img class="invert" src="/images/home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="/images/search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+
+            <div class="library bg-grey round p-1">
+                <div class="heading">
+                    <img class="invert" src="/images/palylist.svg" alt="Playlist">
+                    <h2>Your library</h2>
+                </div>
+
+                <div class="songlist">
+                    <ul>
+
+                    </ul>
+                </div>
+                <footer>
+                    <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety &amp; Privacy
+                                Center</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div>
+
+                </footer>
+
+
+            </div>
+        </div>
+        <div class="rigthside bg-grey round ">
+            <header>
+                <nav>
+                    <img class="invert Hambuger" src="/images/Hamburger.svg" alt="Hambuger Icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </nav>
+
+                <div class="buttons">
+                    <button class="signup">Sign up</button>
+                    <button class="login">Log in</button>
+                </div>
+            </header>
+
+            <section>
+                <h1>Spotify Playlist</h1>
+                <div class="cardContainer">
+                    <div data-folder="ncs" class="card">
+                        <div class="playbtn">
+                            <svg height="48px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60" xml:space="preserve">
+                                <!-- Green Circle -->
+                                <circle cx="30" cy="30" r="30" fill="#1EDB62" />
+                                <!-- Black Play Button -->
+                                <polygon points="23,15 45,30 23,45" fill="black" />
+                            </svg>
+                        </div>
+                        <figure>
+                            <img src="/cover.jpeg" alt="Image">
+                        </figure>
+                        <h2>Ek Tha raja</h2>
+                        <p>Manan Bhardwaj,Vishal Mishra,Jaani</p>
+                    </div>
+
+                    <div data-folder="cs" class="card">
+                        <div class="playbtn">
+                            <svg height="48px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60" xml:space="preserve">
+                                <!-- Green Circle -->
+                                <circle cx="30" cy="30" r="30" fill="#1EDB62" />
+                                <!-- Black Play Button -->
+                                <polygon points="23,15 45,30 23,45" fill="black" />
+                            </svg>
+                        </div>
+                        <figure>
+                            <img src="https://i.scdn.co/image/ab67616d00001e029bb2d30b01ac2cada8a8ad03" alt="Image">
+                        </figure>
+                        <h2>Ek Tha raja</h2>
+                        <p>Manan Bhardwaj,Vishal Mishra,Jaani</p>
+                    </div>  
+                </div>
+
+                <div class="playbar">
+
+                    <div class="manageinfo">
+                        <div class="printInfo">Song Title</div>
+                        <div class="barbtn">
+                            <img src="/images/previuos.svg" alt="Previous" id="previous">
+                            <img src="/images/play.svg" alt="Play" id="play">
+                            <img src="/images/next.svg" alt="Next" id="next">
+                        </div>
+                        <div class="song-info">
+                            <div class="printDuration">00:00/00:00</div>
+                        </div>
+                        <div class="seekbar">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@prefix :  <http://stardog.com/tutorial/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+GRAPH <band>{
+:The_beatles a :band;
+             :member :Ringo-star , :George_harrison, :Paul_mcCartnry,:John_lenon;
+             :name "The Beatles"^^xsd:string.
+}
+GRAPH <SoloArtist>{
+:Ringo-star , :George_harrison, :Paul_mcCartnry,:John_lenon a :SoloArtist.
+}
+
+GRAPH <Album>{
+:Please_Please_Me :track :Love_Me_Do;
+                  a :Album;
+                  :name "Please Please me"^^xsd:string;
+                  :date "1963-03-22"^^xsd:date;
+                  :artist :The_beatles;
+}
+
+GRAPH <Song>{
+:Love_Me_Do :writer :Paul_mcCartnry,:John_lenon
+            a :Song;
+            :name "Love me Do"^^xsd:string;
+            # :length "125"^^xsd:integer. This is generaaly not preffered but it is also correct.
+            :length 125^^xsd:integer.
+}
+
+

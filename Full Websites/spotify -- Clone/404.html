@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            background-image: radial-gradient(#11581E, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #1DB954;
+        }
+
+        .container {
+            background: rgba(0, 30, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 255, 0, 0.1);
+            border: 1px solid rgba(0, 255, 0, 0.18);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,255,0,0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1DB954;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+        }
+
+        p {
+            font-size: 18px;
+            color: #1DB954;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            background: #1DB954;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            background: #ffffff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+        }
+
+        .glitch {
+            position: relative;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            background: linear-gradient(45deg, #1DB954, #0f6632);
+            background-clip:border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #00ff00;
+            animation: glitch-animation 2s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: 2px 0 #00aa00;
+            animation: glitch-animation 2s infinite linear alternate;
+        }
+
+        @keyframes glitch-animation {
+            0% {
+                clip-path: inset(71% 0 10% 0);
+            }
+            20% {
+                clip-path: inset(29% 0 71% 0);
+            }
+            40% {
+                clip-path: inset(57% 0 43% 0);
+            }
+            60% {
+                clip-path: inset(14% 0 86% 0);
+            }
+            80% {
+                clip-path: inset(86% 0 14% 0);
+            }
+            100% {
+                clip-path: inset(43% 0 57% 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glitch">404</h1>
+        <p>Oops! You've encountered a glitch in the matrix.</p>
+        <p>Let's get you back on track. Choose your path:</p>
+        <ul>
+            <li><a href="/">Return to Base</a></li>
+            <li><a href="/">Access the Sitemap</a></li>
+            <li><a href="/contact.html">Contact Mission Control</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<result>
+    <student1 id="1">
+        <name>Nirmit Rampal</name>
+        <crn>2302729</crn>
+        <urn>2215215</urn>
+    </student1>
+        <student2 id="2">
+        <name>Nirmit Rampal</name>
+        <crn>2302345</crn>
+        <urn>2215435</urn>
+    </student2>
+</result>

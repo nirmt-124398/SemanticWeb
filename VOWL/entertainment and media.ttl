@@ -1,0 +1,231 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://visualdataweb.org/newOntology/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@base 			<http://visualdataweb.org/newOntology/> .
+
+<http://visualdataweb.org/newOntology/> rdf:type owl:Ontology ;
+                                        dc:title "New ontology"@en; 
+                                        dc:description "New ontology description"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 20 ###
+#  --------------------------- Property 0------------------------- 
+:hasCreator_ rdf:type owl:ObjectProperty ;
+             rdfs:label "hasCreator "@en; 
+             rdfs:domain :Media;
+             rdfs:range :Person . 
+#  --------------------------- Property 1------------------------- 
+:hasCreator_ rdf:type owl:ObjectProperty ;
+             rdfs:label "hasCreator "@en; 
+             rdfs:domain :Media;
+             rdfs:range :Organization . 
+#  --------------------------- Property 2------------------------- 
+:performsIn rdf:type owl:ObjectProperty ;
+            rdfs:label "performsIn"@en; 
+            rdfs:domain :Person;
+            rdfs:range :Media . 
+#  --------------------------- Property 3------------------------- 
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:label "produces"@en; 
+          rdfs:domain :Organization;
+          rdfs:range :Media . 
+#  --------------------------- Property 4------------------------- 
+:attends rdf:type owl:ObjectProperty ;
+         rdfs:label "attends"@en; 
+         rdfs:domain :Person;
+         rdfs:range :Event . 
+#  --------------------------- Property 5------------------------- 
+:hosts rdf:type owl:ObjectProperty ;
+       rdfs:label "hosts"@en; 
+       rdfs:domain :Platform;
+       rdfs:range :Media . 
+#  --------------------------- Property 6------------------------- 
+:availableON rdf:type owl:ObjectProperty ;
+             rdfs:label "availableON"@en; 
+             rdfs:domain :Media;
+             rdfs:range :Platform . 
+#  --------------------------- Property 7------------------------- 
+:organises rdf:type owl:ObjectProperty ;
+           rdfs:label "organises"@en; 
+           rdfs:domain :Organization;
+           rdfs:range :Event . 
+#  --------------------------- Property 8------------------------- 
+:hasTitle rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasTitle"@en; 
+          rdfs:domain :Media;
+          rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 9------------------------- 
+:hasGenre_ rdf:type owl:DatatypeProperty ;
+           rdfs:label "hasGenre "@en; 
+           rdfs:domain :Media;
+           rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 10------------------------- 
+:hasReleaseDate_ rdf:type owl:DatatypeProperty ;
+                 rdfs:label "hasReleaseDate "@en; 
+                 rdfs:domain :Media;
+                 rdfs:range rdfs:Literal . 
+#  --------------------------- Property 11------------------------- 
+:hasDuration_ rdf:type owl:DatatypeProperty ;
+              rdfs:label "hasDuration "@en; 
+              rdfs:domain :Media;
+              rdfs:range xsd:string . 
+#  --------------------------- Property 12------------------------- 
+:hasRating_ rdf:type owl:DatatypeProperty ;
+            rdfs:label "hasRating "@en; 
+            rdfs:domain :Media;
+            rdfs:range xsd:double . 
+#  --------------------------- Property 13------------------------- 
+: rdf:type owl:DatatypeProperty ;
+  rdfs:label "hasName "@en; 
+  rdfs:domain :Person;
+  rdfs:range xsd:string . 
+#  --------------------------- Property 14------------------------- 
+:hasName_ rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasName "@en; 
+          rdfs:domain :Organization;
+          rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 15------------------------- 
+:hasName_ rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasName "@en; 
+          rdfs:domain :Platform;
+          rdfs:range xsd:string . 
+#  --------------------------- Property 16------------------------- 
+:hasName_ rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasName "@en; 
+          rdfs:domain :Event;
+          rdfs:range xsd:string . 
+#  --------------------------- Property 17------------------------- 
+:hasBirthDate_ rdf:type owl:DatatypeProperty ;
+               rdfs:label "hasBirthDate "@en; 
+               rdfs:domain :Person;
+               rdfs:range xsd:string . 
+#  --------------------------- Property 18------------------------- 
+:hasLocation_ rdf:type owl:DatatypeProperty ;
+              rdfs:label "hasLocation "@en; 
+              rdfs:domain :Event;
+              rdfs:range xsd:string . 
+#  --------------------------- Property 19------------------------- 
+:hasDate_ rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasDate "@en; 
+          rdfs:domain :Event;
+          rdfs:range xsd:string . 
+###  Class Definitions (Number of Classes) 28 ###
+#  --------------------------- Class  0------------------------- 
+:Media rdf:type owl:Class; 
+       rdfs:subClassOf :Movies ;
+       rdfs:subClassOf :Music ;
+       rdfs:subClassOf :TV_Shows ;
+       rdfs:subClassOf :Books ;
+       rdfs:subClassOf :podcasts ;
+       rdfs:label "Media"@en . 
+#  --------------------------- Class  1------------------------- 
+:person rdf:type owl:Class; 
+        rdfs:label "person"@en . 
+#  --------------------------- Class  2------------------------- 
+:Movies rdf:type owl:Class; 
+        rdfs:label "Movies"@en . 
+#  --------------------------- Class  3------------------------- 
+:Music rdf:type owl:Class; 
+       rdfs:subClassOf :Movies ;
+       rdfs:subClassOf :Album ;
+       rdfs:subClassOf :TV_Shows ;
+       rdfs:label "Music"@en . 
+#  --------------------------- Class  4------------------------- 
+:TV_Shows rdf:type owl:Class; 
+          rdfs:subClassOf :Books ;
+          rdfs:label "TV Shows"@en . 
+#  --------------------------- Class  5------------------------- 
+:Books rdf:type owl:Class; 
+       rdfs:label "Books"@en . 
+#  --------------------------- Class  6------------------------- 
+:Podc rdf:type owl:Class; 
+      rdfs:label "Podca"@en . 
+#  --------------------------- Class  7------------------------- 
+:podcasts rdf:type owl:Class; 
+          rdfs:label "podcasts"@en . 
+#  --------------------------- Class  8------------------------- 
+:Person rdf:type owl:Class; 
+        rdfs:subClassOf :Actor ;
+        rdfs:subClassOf :Director ;
+        rdfs:subClassOf :Producer ;
+        rdfs:subClassOf :Musician ;
+        rdfs:subClassOf :Author ;
+        rdfs:label "Person"@en . 
+#  --------------------------- Class  9------------------------- 
+:Actor rdf:type owl:Class; 
+       rdfs:label "Actor"@en . 
+#  --------------------------- Class  10------------------------- 
+:Director rdf:type owl:Class; 
+          rdfs:label "Director"@en . 
+#  --------------------------- Class  11------------------------- 
+:Producer rdf:type owl:Class; 
+          rdfs:label "Producer"@en . 
+#  --------------------------- Class  12------------------------- 
+:Musician rdf:type owl:Class; 
+          rdfs:label "Musician"@en . 
+#  --------------------------- Class  13------------------------- 
+:Author rdf:type owl:Class; 
+        rdfs:label "Author"@en . 
+#  --------------------------- Class  14------------------------- 
+:Organization rdf:type owl:Class; 
+              rdfs:subClassOf :ProductionCompany ;
+              rdfs:subClassOf :Streaming_Service ;
+              rdfs:subClassOf :Record_Label ;
+              rdfs:subClassOf :Theatre ;
+              rdfs:label "Organization"@en . 
+#  --------------------------- Class  15------------------------- 
+:ProductionCompany rdf:type owl:Class; 
+                   rdfs:label "ProductionCompany"@en . 
+#  --------------------------- Class  16------------------------- 
+:Streaming_Service rdf:type owl:Class; 
+                   rdfs:label "Streaming Service"@en . 
+#  --------------------------- Class  17------------------------- 
+:Record_Label rdf:type owl:Class; 
+              rdfs:label "Record Label"@en . 
+#  --------------------------- Class  18------------------------- 
+:Theatre rdf:type owl:Class; 
+         rdfs:label "Theatre"@en . 
+#  --------------------------- Class  19------------------------- 
+:Event rdf:type owl:Class; 
+       rdfs:subClassOf :Concert ;
+       rdfs:subClassOf :Movie_Premiere ;
+       rdfs:subClassOf :Award_Show ;
+       rdfs:subClassOf :Festival ;
+       rdfs:label "Event"@en . 
+#  --------------------------- Class  20------------------------- 
+:Concert rdf:type owl:Class; 
+         rdfs:label "Concert"@en . 
+#  --------------------------- Class  21------------------------- 
+:Movie_Premiere rdf:type owl:Class; 
+                rdfs:label "Movie Premiere"@en . 
+#  --------------------------- Class  22------------------------- 
+:Award_Show rdf:type owl:Class; 
+            rdfs:label "Award Show"@en . 
+#  --------------------------- Class  23------------------------- 
+:Festival rdf:type owl:Class; 
+          rdfs:label "Festival"@en . 
+#  --------------------------- Class  24------------------------- 
+:Platform rdf:type owl:Class; 
+          rdfs:subClassOf :Cinema ;
+          rdfs:subClassOf :Streaming Platform ;
+          rdfs:label "Platform"@en . 
+#  --------------------------- Class  25------------------------- 
+:Cinema rdf:type owl:Class; 
+        rdfs:label "Cinema"@en . 
+#  --------------------------- Class  26------------------------- 
+:Streaming Platform rdf:type owl:Class; 
+                    rdfs:label "Streaming Platform"@en . 
+#  --------------------------- Class  27------------------------- 
+:Album rdf:type owl:Class; 
+       rdfs:label "Album"@en . 

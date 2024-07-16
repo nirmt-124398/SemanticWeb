@@ -1,0 +1,22 @@
+{
+    "name": "Nirmit",
+    "mark": 67.45,
+    "pass": true,
+    "license": null,
+    "arrays": [
+        "n",
+        "e",
+        "p"
+    ],
+    "obj": {
+        "name": "ridhi",
+        "score": 43,
+        "array2": [
+            "food",
+            "cloths",
+            {
+                "a": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "@id": "schema:WebPage",
+            "@type": "rdfs:Class",
+            "rdfs:label": "Web Page",
+            "rdfs:comment": "A web page."
+        },
+        {
+            "@id": "schema:AboutPage",
+            "@type": "rdfs:Class",
+            "rdfs:label": "About Page",
+            "rdfs:comment": "An about page."
+        },
+        {
+            "@id": "schema:Blog",
+            "@type": "rdfs:Class",
+            "rdfs:label": "Blog",
+            "rdfs:comment": "A blog."
+        },
+        {
+            "@id": "schema:BlogPosting",
+            "@type": "rdfs:Class",
+            "rdfs:label": "Blog Posting",
+            "rdfs:comment": "A blog post."
+        },
+        {
+            "@id": "schema:ContactPage",
+            "@type": "rdfs:Class",
+            "rdfs:label": "Contact Page",
+            "rdfs:comment": "A contact page."
+        },
+        {
+            "@id": "schema:ContactPoint",
+            "@type": "rdfs:Class",
+            "rdfs:label": "Contact Point",
+            "rdfs:comment": "A contact point."
+        },
+        {
+            "@id": "schema:headline",
+            "@type": "rdf:Property",
+            "rdfs:label": "headline",
+            "rdfs:domain": "schema:BlogPosting",
+            "rdfs:range": "rdf:Literal"
+        },
+        {
+            "@id": "schema:author",
+            "@type": "rdf:Property",
+            "rdfs:label": "author",
+            "rdfs:domain": "schema:BlogPosting",
+            "rdfs:range": "schema:Person"
+        },
+        {
+            "@id": "schema:contactType",
+            "@type": "rdf:Property",
+            "rdfs:label": "contactType",
+            "rdfs:domain": "schema:ContactPoint",
+            "rdfs:range": "rdf:Literal"
+        },
+        {
+            "@id": "schema:email",
+            "@type": "rdf:Property",
+            "rdfs:label": "email",
+            "rdfs:domain": "schema:ContactPoint",
+            "rdfs:range": "rdf:Literal"
+        }
+    ]
+}

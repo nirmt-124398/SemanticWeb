@@ -1,0 +1,181 @@
+* {
+    margin: 5px;
+
+}
+
+nav {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.rigth ul {
+    display: flex;
+    gap: 10px;
+
+}
+
+.logo img {
+    width: 170px;
+
+}
+
+nav ul li {
+    list-style-type: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.end {
+    height: 30px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin: 62px;
+
+}
+
+.first span {
+    font-size: 48px;
+    font-family: sans-serif;
+}
+
+.first span img {
+    margin: 0 20px;
+}
+
+.first p {
+    font-size: 28px;
+    width: 1067px;
+    text-align: center;
+    font-family: none;
+}
+
+.btn {
+    color: white;
+    background-color: #00b6d1;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bolder;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0px 225px;
+    ;
+
+}
+
+.small {
+    font-size: 15px;
+}
+
+.big {
+    font-size: 25px;
+}
+
+.image {
+    width: 60px;
+}
+
+.flex_grid{
+    display: flex;
+
+}
+
+.logoadnwriting {
+    display: flex;
+    align-items: center;
+    /* width: 80vw; */
+}
+
+.btnsmall {
+    background-color: #5cb85c;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.lang {
+    text-align: center;
+    padding: 38px 0px;
+    font-weight: bolder;
+    font-size: 24px;
+    font-family: monospace;
+}
+
+.item{
+    background-color:#f1f4f269;
+    padding: 0px 90px;
+}
+@media only screen and (max-width:455px){
+
+    .first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        margin: 62px;
+    
+    }
+
+    .first span {
+        font-size: 24px;
+        font-family: sans-serif;
+    }
+    
+    .first span img {
+        margin: 0 20px;
+    }
+    
+    .first p {
+        font-size: 28px;
+        width: 1067px;
+        text-align: center;
+        font-family: none;
+    }
+    
+    .btn {
+        color: white;
+        background-color: #00b6d1;
+        border-radius: 8px;
+        padding: 20px;
+        font-size: 14px;
+        font-weight: bolder;
+        border: 1px solid transparent;
+        text-align: center;
+    }
+    .btnsmall {
+        background-color: #5cb85c;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+}
+

@@ -1,0 +1,6 @@
+1. It is case sensitive.
+2. it has two types:- DTD and XSD 
+    You can use online convertors :
+    a) xml to xsd : https://www.liquid-technologies.com/online-xml-to-xsd-converter
+    b) xml to dtd : use gimine or chatgpt
+    
