@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #1a5f7a;
+    --secondary-color: #57c5b6;
+    --accent-color: #159895;
+    --text-color: #333;
+    --bg-color: #eef2f7;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header img {
+    height: 60px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 1.8em;
+    margin: 30px 0;
+}
+
+.pdf-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.links-container a {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.links-container a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .pdf-container iframe {
+        height: 400px;
+    }
+
+    .links-container {
+        gap: 10px;
+    }
+
+    .links-container a {
+        font-size: 1em;
+    }
+}
